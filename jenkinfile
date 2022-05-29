@@ -1,0 +1,9 @@
+node {
+    stage('maven clean') { 
+        sh 'mvn clean'
+    }
+    stage('Git clone') { 
+      sh 'git credentialsId: 'github2', url: 'https://github.com/harishvani/harishvani.git'
+    }
+ }  
+
